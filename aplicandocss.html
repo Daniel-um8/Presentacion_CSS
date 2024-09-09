@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Presentación CSS</title>
+
+    <style>
+      .css_interno {
+        color: red;
+        font-size: 20px;
+      }
+    </style>
+
+<link rel="stylesheet" href="assets/css/aplicandocss.css">
+<link rel="stylesheet" href="assets/css/reset.css">
+<link rel="stylesheet" href="assets/css/navbar.css">
+    
+</head>
+
+<body>
+
+  <header class="navbar">
+    <div class="logo"> Presentación CSS</div>
+    <nav>
+        <ul>
+            <li><a href="index.html">¿Qué es CSS?</a></li>
+            <li><a href="aplicandocss.html">Aplicando CSS</a></li>
+            <li><a href="boxmodel.html">Box Model</a></li>
+            <li><a href="flexgrid.html">Flexbox y Grid Layout</a></li>
+            <li><a href="responsivedesign.html">Responsive Design</a></li>
+            <li><a href="materialcomplementario.html">+Material</a></li>
+        </ul>
+    </nav>
+  </header>
+
+  <div id="divs1">
+  <h2>CSS inline, interno y externo.</h2>
+
+  <p>
+    Este es un párrafo sin estilo CSS.
+  </p>
+
+  <p style="color: blue; font-size: 20px;">
+    Este es un párrafo con estilos en línea. <br>
+    Se aplica el atributo <code>&lt;style&gt;</code> dentro de la etiqueta html que queramos estilizar.
+  </p>
+
+  <p class="css_interno">Este es un párrafo con estilos internos.<br>
+  El estilo CSS está definido en la etiqueta <code>&lt;style&gt;</code> dentro del <code>&lt;head&gt;</code> de nuestro archivo html.<br> En este caso, el estilo se aplicó llamando a la clase "css_interno".
+  </p>
+  
+  <p id="css_externo">
+    Este es un párrafo con estilos externos. <br>
+    El estilo CSS está en un archivo externo llamado "aplicandocss.css" en la carpeta "assets/css". <br>En este caso, el estilo se aplicó llamando al id "css_externo".
+  </p>
+
+<div class="code-container">
+    <pre><code>&lt;head&gt;
+
+&lt;style&gt;
+.css_interno {
+color: red;
+font-size: 20px;
+}
+&lt;/style&gt;
+
+  &lt;link rel="stylesheet" href="assets/css/aplicandocss.css"&gt;
+
+&lt;/head&gt;
+
+  &lt;p&gt;
+  Este es un párrafo sin estilo CSS.
+  &lt;/p&gt;
+
+  &lt;p style="color: blue; font-size: 20px;"&gt;
+    Este es un párrafo con estilos en línea.
+    Se aplica el atributo style dentro de la etiqueta html que queramos estilizar.
+  &lt;/p&gt;
+
+  &lt;p class="css_interno"&gt;Este es un párrafo con estilos internos.&gt;
+    El estilo CSS está definido en la etiqueta style dentro del head de nuestro archivo.
+    En este caso, el estilo se aplicó llamando a la clase "css_interno".
+  &lt;/p&gt;
+
+  &lt;p id="css_externo"&gt;
+    Este es un párrafo con estilos externos. 
+    El estilo CSS está en un archivo externo llamado "aplicandocss.css" en la carpeta "assets/css".
+    En este caso, el estilo se aplicó llamando al id "css_externo".
+  &lt;/p&gt;
+    </code></pre>
+</div>
+
+
+  </div>
+
+  <div id="divs1">
+
+    <h2>Orden jerárquico Etiqueta - Clase - ID.</h2>
+
+    <h3> Este es un título sin clase ni `id`.</h3>
+
+    <h3 class="resaltado">Este es un título con clase "resaltado" x1.</h3>
+    <h3 class="resaltado">Este es un título con clase "resaltado" x2.</h3>
+    <h3 class="resaltado">Este es un título con clase "resaltado" x3.</h3>
+    
+  <h3 class="resaltado" id="titulo-1">Este es un título con clase "resaltado" e `id` "titulo-1".</h3>
+  
+  <div class="code-container">
+    <pre><code>&lt;h3&gt;Este es un título sin clase ni `id`.&lt;/h3&gt;
+
+&lt;h3 class="resaltado"&gt;Este es un título con clase "resaltado" x1.&lt;/h3&gt;
+&lt;h3 class="resaltado"&gt;Este es un título con clase "resaltado" x2.&lt;/h3&gt;
+&lt;h3 class="resaltado"&gt;Este es un título con clase "resaltado" x3.&lt;/h3&gt;
+
+&lt;h3 class="resaltado" id="titulo-1"&gt;Este es un título con clase "resaltado" e `id` "titulo-1".&lt;/h3&gt;
+    </code></pre>
+</div>
+
+
+  </div>
+
+</body>
+
+
+</html>
